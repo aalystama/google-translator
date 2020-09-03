@@ -78,6 +78,7 @@ class GoogleTranslator {
       alternateTranslated,
       definition,
       synonyms,
+      examples,
       source: sourceText,
       sourceLanguage: _languageList[from],
       targetLanguage: _languageList[to],

@@ -6,6 +6,7 @@ abstract class Translation {
   final List<String> alternative;
   final Map<String, List<String>> definition;
   final List<String> synonyms;
+  final List<String> examples;
   final String source;
   final Language targetLanguage;
   final Language sourceLanguage;
@@ -18,6 +19,7 @@ abstract class Translation {
     this.alternative,
     this.definition,
     this.synonyms,
+    this.examples,
   );
 
   String operator +(other);
@@ -31,6 +33,7 @@ class _Translation extends Translation {
   final List<String> alternative;
   final Map<String, List<String>> definition;
   final List<String> synonyms;
+  final List<String> examples;
   final String source;
   final Language sourceLanguage;
   final Language targetLanguage;
@@ -39,7 +42,8 @@ class _Translation extends Translation {
     this.text,
     this.alternative,
     this.definition,
-    this.synonyms, {
+    this.synonyms,
+    this.examples, {
     this.sourceLanguage,
     this.targetLanguage,
     this.source,
@@ -51,6 +55,7 @@ class _Translation extends Translation {
           alternative,
           definition,
           synonyms,
+          examples,
         );
 
   String operator +(other) => this.toString() + other.toString();
